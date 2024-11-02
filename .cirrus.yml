@@ -4,7 +4,8 @@ task:
     fingerprint_script: echo $CIRRUS_OS
   matrix:
     - container:
-        image: ubuntu:22.04
+        #image: ubuntu:22.04
+        image: ursamajorlab/jammy-python:3.11
       install_script:
         - export RUNLEVEL=1
         #- apt-get update
