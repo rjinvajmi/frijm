@@ -1,15 +1,13 @@
 task:
-  # only_if: "changesInclude('.cirrus.yml', '*.rst', '*.py', '*.conf', 'LICENSE' 'VERSION', 'waf', 'wscript', 'demos/**', 'docs/**', 'scripts/**', 'src/**', 'tests/**')"
   pip_cache:
     folder: ~/.cache/pip
     fingerprint_script: echo $CIRRUS_OS
   matrix:
     - container:
         image: ubuntu:22.04
-        cpu: 4
       install_script:
         - export RUNLEVEL=1
-        - apt-get update
+        #- apt-get update
         #- apt-get install -y apt-utils lsb-release curl gnupg
         #- apt-get update
         #- apt-get install -y dialog python3-pip build-essential doxygen graphviz
@@ -19,11 +17,11 @@ task:
         #- python3 -m pip install --upgrade --requirement requirements.txt
 
 
-  version_script:
-    - python3 --version
+#  version_script:
+#    - python3 --version
   script:
     # basic configuration
-    - python waf configure -v
+    #- python waf configure -v
     - python pjh.py
     ## documentation build
     #- python3 waf build_docs
