@@ -23,8 +23,8 @@ task:
     - python3 --version
   script:
     # basic configuration
-    - python3 waf configure -v
-    - python3 pjh.py
+    - python waf configure -v
+    - python pjh.py
     ## documentation build
     #- python3 waf build_docs
     #- python3 waf clean_docs
