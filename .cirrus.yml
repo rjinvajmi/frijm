@@ -24,7 +24,7 @@ task:
   script:
     # basic configuration
     #- python waf configure -v
-    - python pjh.py
+    - python3 pjh.py
     ## documentation build
     #- python3 waf build_docs
     #- python3 waf clean_docs
