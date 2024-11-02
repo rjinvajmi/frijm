@@ -1,0 +1,32 @@
+# directories
+/build/
+/_build/
+/docs/_build/
+/.vs/
+/.vscode/
+/waf-*/
+/.waf-*/
+/waf3-*/
+/.waf3-*/
+__pycache__/
+/doxygen/
+
+# files
+*.user
+*.dist
+*.exe
+*.dll
+*.lib
+*.log
+.lock-waf_*
+*.a
+*.o
+*.so
+*.patch
+*.tar
+*.bz2
+*.zip
+*.luac
+*.out
+*.pyc
+*.lnk
