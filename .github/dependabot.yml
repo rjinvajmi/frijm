@@ -1,0 +1,25 @@
+name: build
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+
+    env:
+      PY_COLORS: "1"
+      GLOBAL_PROXY: ${{ secrets.GLOBAL_PROXY }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.8'
+    - name: Setup session
+      uses: lhotari/action-upterm@v1   
+      #uses: mxschmitt/action-tmate@v3
+    - name: test
+      run: python ghu.py 
+
